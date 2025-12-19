@@ -1,0 +1,23 @@
+{
+  "name": "coco-artistic-website",
+  "version": "1.0.0",
+  "description": "Coco的个人文艺网站 - 分享自然摄影和名人名言",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "start": "python -m http.server 3000",
+    "build": "echo 'Build completed successfully'",
+    "vercel-build": "echo 'Vercel build completed'"
+  },
+  "keywords": ["personal", "blog", "nature", "photography", "quotes", "artistic"],
+  "author": "Coco",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/coco-artistic-website"
+  },
+  "homepage": "https://coco-artistic.vercel.app"
+}

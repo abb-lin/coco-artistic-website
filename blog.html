@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术博客 - 个人网站</title>
+    <meta name="description" content="分享技术见解、开发经验和学习心得的技术博客">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h2>我的空间</h2>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="index.html#about" class="nav-link">关于我</a></li>
+                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+                <li><a href="blog.html" class="nav-link active">博客</a></li>
+                <li><a href="index.html#contact" class="nav-link">联系我</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 博客页面内容 -->
+    <section class="blog-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>技术博客</h1>
+                <p>分享我在前端开发、用户体验设计和编程学习中的思考和心得</p>
+            </div>
+
+            <!-- 博客文章列表 -->
+            <div class="blog-list">
+                <article class="blog-post">
+                    <div class="post-meta">
+                        <span class="post-date">2024年3月15日</span>
+                        <span class="post-category">前端开发</span>
+                    </div>
+                    <h2><a href="#" class="post-title">2024年现代Web开发趋势分析</a></h2>
+                    <p class="post-excerpt">随着技术的快速发展，Web开发领域也在不断演进。本文将探讨2024年最值得关注的Web开发趋势，包括AI集成、Web Components、性能优化等关键技术方向...</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">阅读全文</a>
+                        <span class="post-stats">阅读 1.2k · 评论 24</span>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-meta">
+                        <span class="post-date">2024年2月28日</span>
+                        <span class="post-category">用户体验</span>
+                    </div>
+                    <h2><a href="#" class="post-title">创建优秀用户体验的10个关键原则</a></h2>
+                    <p class="post-excerpt">用户体验设计不仅仅是美观的界面，更是关于如何让用户在使用产品时感到愉悦和高效。本文将分享10个经过验证的UX设计原则，帮助您创建更好的数字产品...</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">阅读全文</a>
+                        <span class="post-stats">阅读 890 · 评论 18</span>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-meta">
+                        <span class="post-date">2024年2月10日</span>
+                        <span class="post-category">性能优化</span>
+                    </div>
+                    <h2><a href="#" class="post-title">前端性能优化的实用技巧</a></h2>
+                    <p class="post-excerpt">网站性能直接影响用户体验和SEO排名。本文将介绍一系列实用的前端性能优化技巧，包括代码分割、懒加载、缓存策略等，帮助您显著提升网站加载速度...</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">阅读全文</a>
+                        <span class="post-stats">阅读 1.5k · 评论 32</span>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-meta">
+                        <span class="post-date">2024年1月25日</span>
+                        <span class="post-category">React</span>
+                    </div>
+                    <h2><a href="#" class="post-title">React Hooks最佳实践指南</a></h2>
+                    <p class="post-excerpt">React Hooks彻底改变了我们编写React组件的方式。本文将深入探讨各种Hooks的使用场景、常见陷阱以及最佳实践，帮助您写出更优雅和可维护的React代码...</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">阅读全文</a>
+                        <span class="post-stats">阅读 2.1k · 评论 45</span>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-meta">
+                        <span class="post-date">2024年1月12日</span>
+                        <span class="post-category">CSS</span>
+                    </div>
+                    <h2><a href="#" class="post-title">现代CSS布局技术全面解析</a></h2>
+                    <p class="post-excerpt">从Flexbox到Grid，再到Container Queries，现代CSS提供了强大的布局工具。本文将全面解析这些技术的特点、适用场景和实际应用示例...</p>
+                    <div class="post-footer">
+                        <a href="#" class="read-more">阅读全文</a>
+                        <span class="post-stats">阅读 1.8k · 评论 28</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 分页 -->
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">下一页</a>
+            </div>
+
+            <!-- 博客分类 -->
+            <aside class="blog-sidebar">
+                <div class="sidebar-section">
+                    <h3>文章分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#" class="category-link">前端开发 (12)</a></li>
+                        <li><a href="#" class="category-link">用户体验 (8)</a></li>
+                        <li><a href="#" class="category-link">性能优化 (6)</a></li>
+                        <li><a href="#" class="category-link">React (10)</a></li>
+                        <li><a href="#" class="category-link">CSS (7)</a></li>
+                        <li><a href="#" class="category-link">工具推荐 (5)</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>热门文章</h3>
+                    <ul class="popular-posts">
+                        <li><a href="#" class="popular-link">JavaScript异步编程完全指南</a></li>
+                        <li><a href="#" class="popular-link">TypeScript实战技巧分享</a></li>
+                        <li><a href="#" class="popular-link">Vue 3组合式API最佳实践</a></li>
+                        <li><a href="#" class="popular-link">移动端适配解决方案</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 个人网站. 保留所有权利.</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

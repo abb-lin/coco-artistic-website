@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coco的个人文艺空间</title>
+    <meta name="description" content="欢迎来到Coco的个人网站，分享自然摄影和名人名言，希望能帮助到你">
+    <meta name="keywords" content="Coco,个人网站,自然摄影,名人名言,文艺分享">
+    <meta name="author" content="Coco">
+    
+    <!-- 字体和图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>Coco's Space</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">首页</a>
+                <a href="gallery.html" class="nav-link">摄影集</a>
+                <a href="#quotes" class="nav-link">名言库</a>
+                <a href="#stocks" class="nav-link">股票增长</a>
+                <a href="#about" class="nav-link">关于我</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">欢迎来到Coco的个人网站</h1>
+            <p class="hero-subtitle">希望能帮助到你，在这里找到心灵的宁静</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <i class="fas fa-camera"></i>
+                    <span>每日更新自然摄影</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-quote-left"></i>
+                    <span>实时分享名人名言</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 介绍区域 -->
+        <section class="intro-section">
+            <div class="container">
+                <h2 class="section-title">关于这个空间</h2>
+                <p class="section-text">
+                    这里是我分享美好事物的角落，希望通过自然摄影的美丽和名人名言的智慧，
+                    为你带来片刻的宁静与启发。每一张照片都承载着大自然的故事，每一句名言都蕴含着人生的哲理。
+                </p>
+            </div>
+        </section>
+
+        <!-- 左右分栏内容 -->
+        <section class="content-grid">
+            <div class="container">
+                <div class="grid-layout">
+                    <!-- 左侧：自然摄影 -->
+                    <div class="photo-section">
+                        <div class="section-header">
+                            <h3><i class="fas fa-mountain"></i> 自然摄影</h3>
+                            <div class="update-info">
+                                <span class="update-label">下次更新</span>
+                                <span id="photo-countdown" class="countdown">24:00:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="photo-grid" id="photo-container">
+                            <!-- 照片将由JavaScript动态加载 -->
+                        </div>
+                        
+                        <button class="refresh-btn" onclick="refreshPhotos()">
+                            <i class="fas fa-sync-alt"></i> 刷新照片
+                        </button>
+                    </div>
+
+                    <!-- 右侧：名人名言 -->
+                    <div class="quote-section">
+                        <div class="section-header">
+                            <h3><i class="fas fa-book-open"></i> 名人名言</h3>
+                            <div class="update-info">
+                                <span class="update-label">下次更新</span>
+                                <span id="quote-countdown" class="countdown">10:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="quote-card" id="current-quote">
+                            <div class="quote-text">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <span id="quote-text">名言正在加载中...</span>
+                                <i class="fas fa-quote-right quote-icon"></i>
+                            </div>
+                            <div class="quote-author" id="quote-author">- 来源</div>
+                        </div>
+                        
+                        <button class="refresh-btn" onclick="refreshQuote()">
+                            <i class="fas fa-redo"></i> 刷新名言
+                        </button>
+                        
+                        <div class="quote-history">
+                            <h4>今日名言记录</h4>
+                            <div id="quote-history" class="history-list">
+                                <!-- 历史记录将由JavaScript动态加载 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 股票增长区域 -->
+        <section id="stocks" class="stocks-section">
+            <div class="container">
+                <h2 class="section-title">每日股票增长</h2>
+                <p class="section-text">
+                    关注市场动态，追踪热门股票表现，为投资决策提供参考
+                </p>
+                
+                <div class="stocks-grid">
+                    <div class="stock-card">
+                        <div class="stock-header">
+                            <div class="stock-info">
+                                <span class="stock-symbol">AAPL</span>
+                                <span class="stock-name">苹果公司</span>
+                            </div>
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="stock-price">
+                            <span class="current-price">$185.72</span>
+                            <span class="price-change positive">+2.34%</span>
+                        </div>
+                        <div class="stock-chart">
+                            <div class="chart-line"></div>
+                        </div>
+                        <div class="stock-details">
+                            <div class="detail-item">
+                                <span>今日高</span>
+                                <span>$186.45</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>今日低</span>
+                                <span>$183.21</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stock-card">
+                        <div class="stock-header">
+                            <div class="stock-info">
+                                <span class="stock-symbol">MSFT</span>
+                                <span class="stock-name">微软</span>
+                            </div>
+                            <i class="fas fa-window-restore"></i>
+                        </div>
+                        <div class="stock-price">
+                            <span class="current-price">$415.86</span>
+                            <span class="price-change positive">+1.87%</span>
+                        </div>
+                        <div class="stock-chart">
+                            <div class="chart-line"></div>
+                        </div>
+                        <div class="stock-details">
+                            <div class="detail-item">
+                                <span>今日高</span>
+                                <span>$417.23</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>今日低</span>
+                                <span>$412.45</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stock-card">
+                        <div class="stock-header">
+                            <div class="stock-info">
+                                <span class="stock-symbol">TSLA</span>
+                                <span class="stock-name">特斯拉</span>
+                            </div>
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="stock-price">
+                            <span class="current-price">$248.42</span>
+                            <span class="price-change negative">-0.56%</span>
+                        </div>
+                        <div class="stock-chart">
+                            <div class="chart-line"></div>
+                        </div>
+                        <div class="stock-details">
+                            <div class="detail-item">
+                                <span>今日高</span>
+                                <span>$251.78</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>今日低</span>
+                                <span>$245.63</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stocks-update">
+                    <div class="update-info">
+                        <span class="update-label">数据更新时间</span>
+                        <span id="stocks-update-time" class="update-time">正在加载...</span>
+                    </div>
+                    <button class="refresh-btn" onclick="refreshStocks()">
+                        <i class="fas fa-sync-alt"></i> 刷新数据
+                    </button>
+                </div>
+                
+                <div class="stocks-note">
+                    <p><i class="fas fa-info-circle"></i> 股票数据仅供参考，投资有风险，请谨慎决策</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我区域 -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">关于Coco</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>我是Coco，一个热爱生活、追求美好的普通人。</p>
+                        <p>通过这个网站，我希望能够：</p>
+                        <ul class="about-list">
+                            <li><i class="fas fa-heart"></i> 分享自然的美好瞬间</li>
+                            <li><i class="fas fa-lightbulb"></i> 传播智慧的闪光点</li>
+                            <li><i class="fas fa-chart-line"></i> 关注市场动态</li>
+                            <li><i class="fas fa-hand-holding-heart"></i> 为你带来心灵的慰藉</li>
+                            <li><i class="fas fa-seedling"></i> 共同感受生活的温度</li>
+                        </ul>
+                        <p class="about-closing">感谢你的到来，愿这里的每一刻都能为你带来温暖和启发。</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Coco</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>Coco's文艺空间</span>
+                    </div>
+                    <p>分享美好，传递温暖</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">首页</a>
+                    <a href="#gallery">摄影</a>
+                    <a href="#quotes">名言</a>
+                    <a href="#stocks">股票</a>
+                    <a href="#about">关于</a>
+                </div>
+                <div class="footer-stats">
+                    <div class="stat-item">
+                        <span id="photo-count">0</span>
+                        <span>张照片</span>
+                    </div>
+                    <div class="stat-item">
+                        <span id="quote-count">0</span>
+                        <span>句名言</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Coco's文艺空间. 用心分享美好事物.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 脚本文件 -->
+    <script src="script.js"></script>
+</body>
+</html>

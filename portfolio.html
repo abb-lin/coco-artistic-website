@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - 个人网站</title>
+    <meta name="description" content="查看我的项目作品，包括网站开发、应用开发和设计作品">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h2>我的空间</h2>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="index.html#about" class="nav-link">关于我</a></li>
+                <li><a href="portfolio.html" class="nav-link active">作品集</a></li>
+                <li><a href="blog.html" class="nav-link">博客</a></li>
+                <li><a href="index.html#contact" class="nav-link">联系我</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 作品集页面内容 -->
+    <section class="portfolio-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>我的作品集</h1>
+                <p>这里展示了我的一些精选项目，涵盖了网站开发、应用开发和设计等多个领域</p>
+            </div>
+
+            <!-- 详细作品展示 -->
+            <div class="portfolio-details">
+                <div class="project-showcase">
+                    <div class="project-item">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>企业官网重构</h3>
+                            <div class="project-meta">
+                                <span class="project-category">网站开发</span>
+                                <span class="project-date">2024年3月</span>
+                            </div>
+                            <p>为一家科技公司重新设计和开发的企业官网，采用响应式设计，优化了用户体验和页面加载速度。</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>电商移动应用</h3>
+                            <div class="project-meta">
+                                <span class="project-category">应用开发</span>
+                                <span class="project-date">2024年1月</span>
+                            </div>
+                            <p>使用React Native开发的跨平台电商应用，包含商品浏览、购物车、支付等完整功能。</p>
+                            <div class="project-tech">
+                                <span>React Native</span>
+                                <span>Redux</span>
+                                <span>Firebase</span>
+                                <span>Stripe API</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>品牌视觉设计</h3>
+                            <div class="project-meta">
+                                <span class="project-category">设计作品</span>
+                                <span class="project-date">2023年11月</span>
+                            </div>
+                            <p>为初创公司设计的完整品牌视觉系统，包括Logo、色彩方案、字体选择和品牌应用规范。</p>
+                            <div class="project-tech">
+                                <span>Figma</span>
+                                <span>Adobe Illustrator</span>
+                                <span>品牌设计</span>
+                                <span>UI/UX</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 项目统计 -->
+            <div class="project-stats">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4>50+</h4>
+                        <p>完成项目</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>30+</h4>
+                        <p>满意客户</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>3年</h4>
+                        <p>开发经验</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>100%</h4>
+                        <p>项目交付率</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 个人网站. 保留所有权利.</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "name": "coco-artistic-website",
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.md",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "functions": {},
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "buildCommand": "echo 'Building static site...'",
+  "outputDirectory": ".",
+  "installCommand": "echo 'Skipping install for static site'",
+  "framework": null
+}
